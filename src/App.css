@@ -1,24 +1,24 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+*{
+  font-family: 'Roboto', sans-serif;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.main-card{
+  width: 30vw !important;
+  margin: 0 auto;
+  margin-top: 10px;
+  position: relative;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.main-card img{
+  position: relative;
+  width: 100%;
+  height: auto;
 }
-
-.App-intro {
-  font-size: large;
+.main-card .card-title {
+  background-color:#757575 !important;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.main-card .card-title span{
+  color: white !important;
+}
+.main-card .card-text{
+  background-color: #BDBDBD !important;
 }
