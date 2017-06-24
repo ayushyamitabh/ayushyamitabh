@@ -23,7 +23,7 @@
   border-right: 4px solid #698AAD;
 }
 .down-line-small {
-  height: 10vh;
+  height: 9vh;
   width: 49.5vw;
   margin: 0;
   border-right: 4px solid #698AAD;
@@ -45,13 +45,32 @@
   display: block;
   width: 30vw;
   margin-left: 49.5vw;
+  margin-top: -3.5vh;
+  background-color: rgba(0,0,0,0) !important;
   padding-left: 5vw;
   border-left: 4px solid #698AAD;
 }
 .event-card-left {
+  text-align: right;
   display: block;
   width: 30vw;
-  margin-left: 19.7vw;
+  margin-left: 19.8vw;
+  margin-top: -3.5vh;
+  background-color: rgba(0,0,0,0) !important;
   padding-right: 5vw;
   border-right: 4px solid #698AAD;
+}
+.line-branch-right {
+  height: 1vh;
+  width: 5vw;
+  border-bottom: 4px solid #698AAD;
+  border-left: 4px solid #698AAD;
+  margin-left: 49.5vw;
+}
+.line-branch-left {
+  height: 1vh;
+  width: 5vw;
+  border-bottom: 4px solid #698AAD;
+  border-right: 4px solid #698AAD;
+  margin-left: 44.5vw;
 }
