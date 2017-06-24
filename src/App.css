@@ -1,1 +1,57 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+.head {
+  width: -webkit-fit-content;
+  padding: 5vh 5vw;
+  text-align: center;
+  margin: 35vh auto;
+  margin-bottom: 0;
+  background-color: #4A5899 !important;
+}
+.head h1 {
+  font-size: 50px;
+  color: white;
+  font-weight: 400;
+}
+.head h3 {
+  color: white;
+  font-weight: 400;
+}
+.down-line{
+  height: 40vh;
+  width: 49.5vw;
+  margin: 0;
+  border-right: 4px solid #698AAD;
+}
+.down-line-small {
+  height: 10vh;
+  width: 49.5vw;
+  margin: 0;
+  border-right: 4px solid #698AAD;
+}
+.line-dot{
+  margin: 0 auto;
+  width: 8vh;
+  height: 8vh;
+  border-radius: 100%;
+  background-color: #DD6E42;
+}
+.line-dot h2 {
+  margin: 0;
+  position: relative;
+  padding-top: 30%;
+  margin-left: 110%;
+}
+.event-card-right {
+  display: block;
+  width: 30vw;
+  margin-left: 49.5vw;
+  padding-left: 5vw;
+  border-left: 4px solid #698AAD;
+}
+.event-card-left {
+  display: block;
+  width: 30vw;
+  margin-left: 19.7vw;
+  padding-right: 5vw;
+  border-right: 4px solid #698AAD;
+}
