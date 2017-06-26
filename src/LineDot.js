@@ -15,7 +15,7 @@ class LineDot extends Component {
   }
   render() {
     return(
-      <div id={this.props.id}>
+      <div className="root" id={this.props.id}>
         <div className="line-dot"><h2>{this.props.year}</h2></div>
         {
           this.state.events.map((item, index)=>{
