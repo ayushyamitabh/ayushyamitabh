@@ -34,7 +34,10 @@ class Timeline extends Component {
   render() {
     return (
       <div>
-        <Paper className="head" zDepth={0}>
+        <div className="down-line-small"/>        
+        <div className="up-arrow" onClick={()=>{this.props.pageChanger('home')}}>▲</div>
+        <div className="down-line-small"/>
+        <Paper className="head" zDepth={0} onClick={()=>{this.props.pageChanger('home')}}>
           <h1>AYUSHYA AMITABH</h1>
           <h3>Start your travel down my memory lane</h3>
         </Paper>

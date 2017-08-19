@@ -9,13 +9,19 @@ class App extends Component {
     this.state={
       p: 'home'
     }
+    this.pageChange = this.pageChange.bind(this);
+  }
+  pageChange(p){
+    this.setState({
+      p: p
+    })
   }
   render() {
     return (
       <div>
         {
-          this.state.p === 'home' ? <Home />:
-          <Timeline />
+          this.state.p === 'home' ? <Home pageChanger={this.pageChange} />:
+          <Timeline pageChanger={this.pageChange}/>
         }
       </div>
     );
