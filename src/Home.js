@@ -11,6 +11,7 @@ import CodeIcon from 'material-ui/svg-icons/action/code';
 import ProjectIcon from 'material-ui/svg-icons/hardware/developer-board';
 import Projects from 'material-ui/svg-icons/device/developer-mode';
 import Business from 'material-ui/svg-icons/communication/business';
+import Skills from 'material-ui/svg-icons/social/whatshot';
 import profile from './profile.jpg';
 import './App.css';
 import $ from 'jquery';
@@ -22,6 +23,10 @@ class Home extends Component {
     this.state = {
       project:true
     }
+    this.pLang = ['C++', 'Java', 'JavaScript', 'Python', 'R5RS (Scheme)', 'MySQL', 'Node.JS', 'ReactJS', 'React Native', 'Electron JS', 'HTML5', 'CSS3'];
+    this.fLang = ['Hindi (Fluent)', 'French (Conversational)'];
+    this.OS = ['Windows', 'Linux - elementaryOS & Ubuntu'];
+    this.otherSkills = ['Adobe Photoshop', 'Adobe InDesign', 'Adobe Illustrator', 'Adobe After Effects', 'Adobe Dreamweaver'];
   }
   componentDidMount() {
     setTimeout(()=>{ $('.avatar').addClass('avatar-resize'); }, 10);
@@ -45,28 +50,30 @@ class Home extends Component {
         <div className="down-line-small"></div>
         <h1 onClick={this.popName} className="home-name">Ayushya Amitabh</h1>
         <div className="down-line-small"></div>
+        <h1 onClick={this.popName} className="home-subname">Pursuing B.S. in Computer Science<br/>@ CUNY City College of New York</h1>
+        <div className="down-line-small" />
         <h1 onClick={this.popName} className="home-name arrow">▼</h1>
         <div className="down-line-small"></div>
         <div className="home-name" onClick={()=>{this.props.pageChanger('timeline')}}>
           <TimelineIcon />
-          <span>Ayushya's Timeline</span>
+          <span>Timeline</span>
         </div>
         <div className="down-line" />
         <h2 
           className="home-name green" 
           onClick={()=>{this.toggleView('projects')}} >
           <Projects className="icon green"/>
-          PROJECTS
+          Projects
         </h2>
         <div className="projects hideView">
           <Chip className="chip-link" href="https://www.github.com/ayushyamitabh">
             github/ayushyamitabh
           </Chip>
           <Project 
-            title="Musicroom" 
+            title="Together Web" 
             subtitle="Personal Project"
             description="Web and mobile app that provides synced video & music streaming, along with chat. This project uses ReactJS, ReactNative, Socket.io, & Node.js."
-            link={{git:"https://www.github.com/ayushyamitabh/musicroom"}}
+            link={{git:"https://www.github.com/ayushyamitabh/TogetherWeb"}}
           />
           <Project 
             title="Appraisals Partner Managment"
@@ -92,13 +99,46 @@ class Home extends Component {
             description="Franchisee login, and product order portal for Cocoa Grinder NYC partners. Built using ReactJS, Firebase, & Material-UI."
             link={{url:"https://order.cocoagrinderfranchise.com/",git:"https://github.com/ayushyamitabh/cocoagrinderfranchise"}}
           />
+          <Project
+            title="Cocoa Grinder Franchisee App"
+            subtitle="Project for Cocoa Grinder Franchise"
+            description="Franchisee login, and product order portal for Cocoa Grinder NYC partners. This app also adds a community issue tracker, and blog/chat functionality. Built using ReactNative, Firebase, & Material-UI."
+            link={{git:"https://github.com/ayushyamitabh/FranchiseeApp"}}
+          />
+          <Project
+            title="Character Frequency Counter"
+            subtitle="Final Project for Intro to Python"
+            description="Python character frequency counter and graph-er that produces a pie chart showing the frequency of each character."
+            link={{git:"https://github.com/ayushyamitabh/Character-Frequency-Counter"}}
+          />
+          <Chip className="chip-link">
+            ALGORITHMS
+          </Chip>
+          <div className="side-scroll">
+            <Chip className="chip" href="https://www.github.com/ayushyamitabh/sorting-algorithms">
+              <Avatar className="scroll-avatar" icon={<CodeIcon />} />
+              Sorting
+            </Chip>
+            <Chip className="chip" href="https://www.github.com/ayushyamitabh/searching-algorithms">
+              <Avatar className="scroll-avatar" icon={<CodeIcon />} />
+              Searching
+            </Chip>
+            <Chip className="chip" href="https://www.github.com/ayushyamitabh/graph-traversal">
+              <Avatar className="scroll-avatar" icon={<CodeIcon />} />
+              Graph Traversal
+            </Chip>
+            <Chip className="chip" href="https://www.github.com/ayushyamitabh/greedy-method">
+              <Avatar className="scroll-avatar" icon={<CodeIcon />} />
+              Greedy Method
+            </Chip>
+          </div>
         </div>        
         <div className="down-line" />
         <h2 
           className="home-name blue"
           onClick={()=>{this.toggleView('experience')}} >
           <Business className="icon blue" />
-          EXPERIENCE
+          Experience
         </h2>
         <div className="experience hideView">
           <Chip className="chip-link blue" href="https://www.linkedin.com/in/ayushyamitabh">
@@ -151,6 +191,71 @@ class Home extends Component {
             title="Graphic Design Intern"
             subtitle="Rescuing Leftover Cuisine • Jun 2016 - Nov 2016 • 6 mos"
           />
+        </div>
+        <div className="down-line" />
+        <h2 
+          className="home-name yellow"
+          onClick={()=>{this.toggleView('skills')}} >
+          <Skills className="icon yellow" />
+          Skills
+        </h2>
+        <div className="skills hideView">
+          <Chip className="chip-link yellow">
+            PROGRAMMING LANGUAGES
+          </Chip>
+          <div className="side-scroll">
+            {
+              this.pLang.map((data, index)=>{
+                return (
+                  <Chip key={`plang${index}`} className="chip">
+                    {data}
+                  </Chip>
+                );
+              })
+            }
+          </div>
+          <Chip className="chip-link yellow">
+            LANGUAGES
+          </Chip>
+          <div className="side-scroll">
+            {
+              this.fLang.map((data, index)=>{
+                return (
+                  <Chip key={`flang${index}`} className="chip">
+                    {data}
+                  </Chip>
+                );
+              })
+            }
+          </div>
+          <Chip className="chip-link yellow">
+            OS
+          </Chip>
+          <div className="side-scroll">
+            {
+              this.OS.map((data, index)=>{
+                return (
+                  <Chip key={`os${index}`} className="chip">
+                    {data}
+                  </Chip>
+                );
+              })
+            }
+          </div>
+          <Chip className="chip-link yellow">
+            OTHER
+          </Chip>
+          <div className="side-scroll">
+            {
+              this.otherSkills.map((data, index)=>{
+                return (
+                  <Chip key={`other${index}`} className="chip">
+                    {data}
+                  </Chip>
+                );
+              })
+            }
+          </div>
         </div>
       </div>
     );

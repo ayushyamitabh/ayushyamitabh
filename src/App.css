@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
-.root {
-}
 .head {
   width: 100%;
   height: 100%;
@@ -143,6 +141,35 @@
   justify-content: center !important;
   align-content: center !important;
 }
+.home-subname {
+  width: -webkit-fit-content;
+  white-space: nowrap !important;
+  max-width: 100% !important;
+  text-overflow: ellipsis !important;
+  margin: 0 auto;
+  transition: all ease-in 0.3s;
+  background-color: white;
+  overflow: hidden;
+  color: #4285F4;
+  padding: 7px 15px;
+  position: relative;
+  border-radius: 35px !important;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  filter: drop-shadow(inset 4px 8px 2px gray);
+  display: flex !important;
+  text-align: center !important;
+  justify-content: center !important;
+  align-content: center !important;
+  border: 2px solid #4285F4;
+  transition: all ease-in-out 0.2s !important;
+}
+.home-subname:hover {
+  background-color: #4C7FFF !important;
+  color: white !important;
+  border: 4px solid #4C7EFF;
+}
 .home-name.arrow{
   text-align: center !important;
   padding: 7px 8px 5px 8px !important;
@@ -245,8 +272,25 @@ h2.home-name:hover
   .icon.blue{
     color: white !important;
   }
+
+h2.home-name.yellow {
+  border: 2px solid #FBBC05;
+  color: #FBBC05;
+}
+h2.home-name.yellow:hover{
+  background: #FBBC05;
+  color: white;
+}
+.icon.yellow {
+  color: #FBBC05 !important;
+}
+h2.home-name:hover 
+  .icon.yellow{
+    color: white !important;
+  }
+
 .home .project-card {
-  width: fit-content !important;
+  width: 80% !important;
   height: fit-content !important;
   margin: 4px auto;
   margin-bottom: 10px !important;
@@ -274,8 +318,9 @@ h2.home-name{
 .home .chip-link span {
   color: white !important;
   letter-spacing: 1px !important;
+  text-transform: uppercase !important; 
 }
-.projects, .experience{
+.projects, .experience, .skills{
   transition: all ease-out 0.3s !important;
   display: flex;
   flex-direction: column;
@@ -293,6 +338,9 @@ h2.home-name{
 .experience {
   border: 2px solid #4285F4;
 }
+.skills {
+  border: 2px solid #FBBC05;
+}
 .hideView {
   transition: all ease-out 0.3s !important;
   height: 0 !important;
@@ -304,10 +352,57 @@ h2.home-name{
 .chip-link.blue{
   background: #4285F4 !important;
 }
+.chip-link.yellow{
+  background: #FBBC05 !important;
+}
 .job-card {
   width: 90% !important;
   margin: 0 auto;
   margin-bottom: 10px;
+}
+.side-scroll {
+  margin: 0 auto !important;
+  width: fit-content !important;
+  display: flex !important;
+  flex-direction: row !important;
+  /* justify-content: center !important; */
+  max-width: 90% !important;
+  overflow-y: hidden !important;
+  overflow-x: auto !important;
+  padding-bottom: 4px !important;
+}
+.side-scroll .chip {
+  margin-right: 4px !important;
+  cursor: pointer !important;
+  background: rgba(255,255,255,0.7) !important;
+  border: 1px solid #34A853 !important;
+  transition:  all linear 0.2s;
+}
+.skills .side-scroll .chip {
+  border: 1px solid #FBBC05 !important;
+}
+.side-scroll .chip span{
+  color: #34A853 !important;
+}
+.skills .side-scroll .chip span{
+  color: #CA9600 !important;
+}
+.side-scroll .chip:hover {
+  background: white !important;
+}
+.side-scroll .chip:hover
+  .scroll-avatar{
+    background: white !important;
+  }
+.side-scroll .chip .scroll-avatar {
+  background: none !important;
+  transition: all linear 0.1s;
+}
+.side-scroll .chip .scroll-avatar svg {
+  fill: #34A852 !important;
+}
+.skills .side-scroll .chip .scroll-avatar svg {
+  fill: #FBBC05 !important;
 }
 /*************************************/
 /*************************************/
@@ -352,8 +447,11 @@ h2.home-name{
   .avatar.avatar-resize {
     width: 80% !important;
   }
-  .projects, .experience{
+  .projects, .experience, .skills{
     width: 90% !important;
+  }
+  .projects .side-scroll, .skills .side-scroll {
+    justify-content: flex-start !important;
   }
   .event-card-left{
     text-align: center;
