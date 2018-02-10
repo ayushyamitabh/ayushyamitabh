@@ -1,0 +1,14 @@
+#projects .page{
+    width: 75% !important;
+    height: 70% !important;
+    display: flex;
+    flex-direction: row !important;
+    box-shadow: 1px 1px 30px 2px rgba(10, 10, 10, 0.5);
+    transform: scale(1.005) !important;
+    transition: all ease-in-out 0.3s;
+    margin-top: -20% !important;
+}
+#projects .page:hover{
+    box-shadow: 1px 1px 5px 1px rgba(10, 10, 10, 0.5);
+    transform: scale(1) !important;     
+}
