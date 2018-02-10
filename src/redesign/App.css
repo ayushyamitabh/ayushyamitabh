@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+body{
+    width: 100vw !important;
+    height: 100vh !important;
+    /* background: rgba(100,150,200,1) !important;   */
+    position: relative !important;
+}
+#root{
+    width: 100% !important;
+    height: 100% !important;
+    /* background: rgba(200,150,100,1); */
+    position: relative !important;
+}
+.page{
+    width: 100% !important;
+    height: 100% !important;
+    background: rgb(231, 231, 231) !important;
+}
+.hor-flex-box{
+    display: flex !important;
+    width: 90% !important;
+    flex-direction: row !important;
+    padding: 10px 5% !important;
+    justify-content: center !important;
+    position: relative !important;
+}
+.ver-flex-box{
+    position: relative !important;
+    display: flex !important;
+    flex: 1;
+    flex-direction: column !important;
+    padding: 2px 5px !important;
+    align-items: center !important;
+}
+.ver-divider{
+    display: block !important;
+    width: 1px !important;
+    background: gray !important;
+}
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.test-box{
+    width: 100% !important;
+    height: 20px !important;
+    background: red !important;
+    margin: 2px;
+    animation-duration: 400ms; /* the duration of the animation */
+    animation-timing-function: ease-out; /* how the animation will behave */
+    animation-delay: 0s; /* how long to delay the animation from starting */
+    animation-iteration-count: 1; /* how many times the animation will play */
+    animation-name: slideInFromTop; /* the name of the animation we defined above */
+}
+.test-box2{
+    width: 100%;
+    height: 60px;
+    background: blue;
+    animation-duration: 400ms; /* the duration of the animation */
+    animation-timing-function: ease-out; /* how the animation will behave */
+    animation-delay: 0s; /* how long to delay the animation from starting */
+    animation-iteration-count: 1; /* how many times the animation will play */
+    animation-name: slideInFromTop; /* the name of the animation we defined above */
+}
+h1{
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 18px !important;
+    padding: 5px 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+    transition: all ease-in-out 0.2s;
+    cursor: default !important;
+}
+h1:hover{
+    background: rgba(150,150,150,0.2);
+    font-weight: 400 !important;
+}
