@@ -1,14 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500');
+
 #projects .page{
     width: 75% !important;
-    height: 70% !important;
     display: flex;
     flex-direction: row !important;
-    box-shadow: 1px 1px 30px 2px rgba(10, 10, 10, 0.5);
-    transform: scale(1.005) !important;
-    transition: all ease-in-out 0.3s;
-    margin-top: -20% !important;
+    margin-top: -5% !important;
 }
-#projects .page:hover{
+#projects .page .card{
+    font-family: 'Quicksand', sans-serif !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    background: rgb(245, 245, 245) !important;
+    box-shadow: 1px 1px 20px 2px rgba(10, 10, 10, 0.5);
+    transition: all ease-in-out 0.2s;
+    border-radius: 10px !important;
+    margin-bottom: 10px !important;
+}
+#projects .page .card:hover{
     box-shadow: 1px 1px 5px 1px rgba(10, 10, 10, 0.5);
-    transform: scale(1) !important;     
+    transform: scale(0.995);
+}
+#projects .page .card.error{
+    padding: 10px !important;
+    text-align: center !important;
+}
+#projects .page .card h1.section{
+    font-weight: 300 !important;
+    text-align: center !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+#projects .page .left-pane{
+    flex: 1 !important;
+    margin: 0 10px !important;
+    padding: 0 !important;
+}
+#projects .page .right-pane{
+    flex: 1 !important;
+    margin: 0 10px !important;
+    padding-top: 20px !important;
+}
+#projects .page .card h1.title{
+    font-weight: 400 !important;
+    font-size: 20px !important;
+    padding: 0 !important;
+    padding-top: 10px !important;
+    padding-bottom: 4px !important;
+    border-bottom: 1px solid black; 
+    width: 85% !important;
+    margin: 0 auto !important;
+}
+#projects .page .card h3.for{
+    width: 85% !important;
+    margin: 0 auto !important;
+    font-weight: 300 !important;
+    font-size: 16px !important;
+}
+#projects .page .card p.desc{
+    width: 85% !important;
+    margin: 0 auto !important;
+    padding: 5px 0 15px 0 !important;
+    font-size: 14px !important;
+    color: royalblue !important;
 }
