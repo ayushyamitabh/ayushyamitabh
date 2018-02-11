@@ -25,7 +25,7 @@ export default class App extends Component{
                             B.Sc. in Computer Science &nbsp;•&nbsp; CUNY City College
                         </h2>
                         <h2 className="title">
-                            "Genius"/NodeJS Dev &nbsp;•&nbsp; Mobikasa, Inc.
+                            Genius/NodeJS Dev &nbsp;•&nbsp; Mobikasa, Inc.
                         </h2>
                         <div className="btn-container">
                             <a href={resume}>

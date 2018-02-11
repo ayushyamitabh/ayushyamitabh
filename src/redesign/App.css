@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500');
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(400px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 #root .page{
     width: 75% !important;
     height: 70% !important;
@@ -31,7 +39,7 @@
     z-index: 100 !important;
     height: 300px !important;
     width: 300px !important;
-    margin-left: -22% !important;
+    margin-left: -23.5% !important;
     border-radius: 100% !important;
     display: flex !important;
     justify-content: center !important;
@@ -79,6 +87,8 @@
     padding: 0 !important;
     margin: 0 !important;
     padding-left: 20px !important;
+    font-weight: 400 !important;
+    font-size: 12px !important;
 }
 .btn-container{
     display: flex !important;

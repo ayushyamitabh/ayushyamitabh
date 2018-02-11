@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500');
 
-#projects .page{
+#experience .page{
     width: 75% !important;
     height: 70% !important;
     display: flex;
     flex-direction: row !important;
-    /* margin-top: -28% !important; */
+    /* margin-top: -55% !important; */
     position: relative !important;
 }
-#projects .page .card{
+#experience .page .card{
     font-family: 'Quicksand', sans-serif !important;
     width: 100% !important;
     margin: 0 auto !important;
@@ -18,37 +18,37 @@
     border-radius: 10px !important;
     margin-bottom: 10px !important;
 }
-#projects .page .card:hover{
+#experience .page .card:hover{
     box-shadow: 1px 1px 5px 1px rgba(10, 10, 10, 0.5);
     transform: scale(0.995);
 }
-#projects .page .card.section{
-    background: rgb(84, 140, 214) !important;
+#experience .page .card.section{
+    background: rgb(210, 218, 104) !important;
     cursor: pointer !important;
 }
-#projects .page .card.error{
+#experience .page .card.error{
     padding: 10px !important;
     text-align: center !important;
     background: rgba(200,100,100,1) !important;
     color: white !important;
 }
-#projects .page .card.loading{
+#experience .page .card.loading{
     padding: 10px 0 !important;
     text-align: center !important;
     background: rgb(100, 200, 158) !important;
     color: white !important;
 }
-#projects .page .card h1.section{
+#experience .page .card h1.section{
     margin: 0 !important;
     font-weight: 300 !important;
     text-align: center !important;
     padding-top: 10px !important;
     color: lightcyan !important;
 }
-#projects .page .card.section img{
+#experience .page .card.section img{
     width: 10% !important;
 }
-#projects .page .card.section .link{
+#experience .page .card.section .link{
     width: 100% !important;
     display: flex !important;
     flex-direction: row !important;
@@ -57,21 +57,21 @@
     color: white !important;
     padding-bottom: 5px !important;
 }
-#projects .page .left-pane{
+#experience .page .left-pane{
     flex: 1 !important;
     margin-right: 5px !important;
 }
-#projects .page .right-pane{
-    padding: 5px 10px 0 10px !important;
+#experience .page .right-pane{
+    padding: 6px 10px 0 10px !important;
     flex: 1 !important;
     margin-left: 5px !important;
     height: 100% !important;
     max-height: 100% !important;
     overflow-y: scroll !important;
-    border-top: 5px solid rgb(84, 140, 214);
-    border-bottom: 5px solid rgb(84, 140, 214);
+    border-top: 5px solid rgb(210, 218, 104);
+    border-bottom: 5px solid rgb(210, 218, 104);
 }
-#projects .page .card h1.title{
+#experience .page .card h1.title{
     font-weight: 400 !important;
     font-size: 20px !important;
     padding: 0 !important;
@@ -81,13 +81,13 @@
     width: 85% !important;
     margin: 0 auto !important;
 }
-#projects .page .card h3.for{
+#experience .page .card h3.for{
     width: 85% !important;
     margin: 0 auto !important;
     font-weight: 300 !important;
     font-size: 16px !important;
 }
-#projects .page .card p.desc{
+#experience .page .card p.desc{
     width: 85% !important;
     margin: 0 auto !important;
     padding: 5px 0 15px 0 !important;

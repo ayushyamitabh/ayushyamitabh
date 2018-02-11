@@ -23,10 +23,12 @@ body{
   justify-content: center !important;
   align-items: center !important;
 }
-#projects{ 
+#projects,#experience{ 
   margin: 0 !important;
+  /* margin-top: -12% !important; */
   padding: 0 !important;
   width: 100% !important;
+  height: 100% !important;
   position: relative !important;
   display: flex !important;
   justify-content: center !important;
