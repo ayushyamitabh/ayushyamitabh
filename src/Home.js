@@ -67,6 +67,7 @@ class Home extends Component {
                 Computer Science Major & Math Minor <br /> @ CUNY City College of New York
               </Typography>
             </Paper>
+            <div className="small-screen-container">
             <div className="home-tile-buttons">
               <List component="nav" subheader={<ListSubheader component="div">PROFESSIONAL ME</ListSubheader>}>
                 <ListItem button component="a" href="mailto:ayushyamitabh@gmail.com" data-aos="fade-left" data-aos-delay="150">
@@ -141,6 +142,7 @@ class Home extends Component {
                 <Divider inset data-aos="fade-left" data-aos-delay="650"/>
               </List>
             </div>
+            </div>
           </div>
           <IconButton onClick={()=>{document.scrollingElement.scrollBy(0,window.innerHeight);}} className="down-arrow" data-aos="fade-up" data-aos-duration="300" data-aos-delay="900" data-aos-offset="10">
             <KeyboardArrowDown />
@@ -159,7 +161,7 @@ class Home extends Component {
                   <div className="section-card" key={`exp${index}`} data-aos="fade-left" data-aos-delay="500">
                     <Card className="card" >
                       <CardHeader title={value.title} subheader={value.comp} />
-                      <CardContent>
+                      <CardContent className="content">
                         <Typography variant="subheading">
                           {value.from} ~ {value.to}
                         </Typography>
@@ -192,7 +194,7 @@ class Home extends Component {
                   <div className="section-card" key={`proj${index}`} data-aos="fade-left" data-aos-delay="500">
                     <Card className="card" >
                       <CardHeader title={value.name} subheader={value.for} />
-                      <CardContent>
+                      <CardContent  className="content">
                         <Typography variant="body1">
                           {value.desc}
                         </Typography>
@@ -224,7 +226,7 @@ class Home extends Component {
                   <div className="section-card" key={key} data-aos="fade-left" data-aos-delay="500">
                     <Card className="card" >
                       <CardHeader title={key} />
-                      <CardContent>
+                      <CardContent  className="content">
                         {
                           this.state.data.Skills[key].map(( skill, skillIndex )=>{
                             return (<Chip key={`${key}-skill-${skillIndex}`} label={skill} className="skill-chip"/>);
