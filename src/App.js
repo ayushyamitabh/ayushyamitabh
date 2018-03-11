@@ -1,29 +1,20 @@
-import React, { Component } from 'react';
-import Timeline from './Timeline.js';
+import React, {Component} from "react";
+import { Router, Route } from "react-router";
+import createBrowserHistory from 'history/createBrowserHistory';
 import Home from './Home.js';
-import './App.css';
+import Timeline from './timeline.js';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state={
-      p: 'home'
-    }
-    this.pageChange = this.pageChange.bind(this);
-  }
-  pageChange(p){
-    this.setState({
-      p: p
-    })
-  }
+const history = createBrowserHistory()
+
+class App extends Component{
   render() {
     return (
-      <div>
-        {
-          this.state.p === 'home' ? <Home pageChanger={this.pageChange} />:
-          <Timeline pageChanger={this.pageChange}/>
-        }
-      </div>
+      <Router history={history}>
+        <div className="router-container">
+          <Route exact path="/" component={Home} />
+          <Route exact path="/timeline" component={Timeline} />
+        </div>
+      </Router>
     );
   }
 }

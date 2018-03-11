@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './redesign/App';
-import Projects from './redesign/Projects';
-import Experience from './redesign/Experience';
-import registerServiceWorker from './registerServiceWorker';
 import './index.css';
-import injectTapEventPlugin from 'react-tap-event-plugin';
+import './aos.css';
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
+import AOS from 'aos';
+import "../node_modules/aos/dist/aos.css";
 import * as firebase from 'firebase';
-
+AOS.init();
 var config = {
     apiKey: "AIzaSyCAZS-14yDcR8its35FkTa-qASjjC6cy-8",
     authDomain: "ayushyamitabh-3c202.firebaseapp.com",
@@ -17,10 +17,5 @@ var config = {
     messagingSenderId: "423859419654"
   };
 firebase.initializeApp(config);
-
-injectTapEventPlugin();
 ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(<Projects />, document.getElementById('projects'));
-ReactDOM.render(<Experience />, document.getElementById('experience'));
-
 registerServiceWorker();
