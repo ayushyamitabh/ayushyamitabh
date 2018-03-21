@@ -116,68 +116,36 @@
 * ::-webkit-scrollbar-corner {
   background: transparent;
 }
-@media only screen and (max-width: 768px) {
-  .section-content.home{
-    overflow-y: hidden !important;
-    overflow-x: auto !important;
-  }
-  .name-paper{
-    min-width: 300px;
-    margin-right: 4px;
-  }
-  .home-tile-buttons{
-    width: 299px;
-  }
-  .home-tile-buttons p{
-    display: none;
-  }
-  .small-screen-container{
-    flex-direction: column;
-  }
-}
-@media only screen and (max-width: 732px) {
-  .section-content.home{
-    overflow-y: hidden !important;
-    overflow-x: auto !important;
-  }
-  .name-paper{
-    min-width: 150px;
-    margin-right: 4px;
-    height: 100% !important;
-  }
-  .name-paper h1{
-    font-size: 19px;
-  }
-  .name-paper aside{
-    font-size: 12px;
-  }
-  .home-tile-buttons{
-    width: 299px;
-  }
-  .home-tile-buttons p{
-    display: none;
-  }
-  .small-screen-container{
-    flex-direction: row;
-  }
-  .section-heading{
-    padding: 7px;
-    border-radius: 5px !important;
-  }
-  .section-heading h1{
-    font-size: 20px !important;
-    color: black;
-  }
-  .section-card .card{
-    max-height: 220px !important;
-  }
-  .section-card .card .content{
-    overflow-y: auto !important;
-    max-height: 25%;
-  }
-}
 @media only screen and (max-width: 425px) {
   .name-paper{
     min-width: 250px;
+  }
+  .name-paper h1{
+    font-size: 18px !important;
+  }
+  .name-paper aside {
+    font-size: 14px !important;
+  }
+  .section-content{
+    overflow-y: hidden !important;
+    height: 350px;
+  }
+  .section-card{
+    min-width: 95%;
+    width: 95% !important;
+    max-width: 95% !important;
+  }
+  .content{
+    overflow-y: auto !important;
+    max-height: 53%;
+  }
+  .timeline-container{
+    overflow: hidden !important;
+  }
+  .event-card{
+    width: 90% !important;
+    align-self: center !important;
+    margin: 0 !important;
+    text-align: center !important;
   }
 }
