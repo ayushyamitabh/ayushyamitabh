@@ -1,5 +1,8 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'userview.dart';
+import 'login.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
@@ -9,48 +12,38 @@ class ScreenHandler extends StatefulWidget {
 }
 
 class ScreenHandlerState extends State<ScreenHandler>{
-        final _bckgColor = Color(0xFF42A5F5);
-        int _currentIndex =  0;
+        bool _signedIn = false;
+
+        void _signOut() {
+                _auth.signOut();
+        }
 
         @override
         Widget build (BuildContext context){
+                Stream<FirebaseUser> userStream = _auth.onAuthStateChanged;
+                userStream.listen((FirebaseUser user){
+                        if (user != null) {
+                                setState(() {
+                                        _signedIn = true;
+                                });
+                        } else {
+                                setState(() {
+                                        _signedIn = false;
+                                });
+                        }
+                });
                 return new Scaffold(
-                        body: new Scrollable(),
-                        bottomNavigationBar: new BottomNavigationBar(
-                                currentIndex: _currentIndex,
-                                onTap: _changeScreen,
-                                items: [
-                                        new BottomNavigationBarItem(
-                                                title: new Text('Projects'),
-                                                icon:  new Icon(Icons.folder),
-                                                backgroundColor:  _bckgColor
-                                        ),
-
-                                        new BottomNavigationBarItem(
-                                                title: new Text('Experience'),
-                                                icon: new Icon(Icons.work),
-                                                backgroundColor:  _bckgColor
-                                        ),
-
-                                        new BottomNavigationBarItem(
-                                                title:  new Text('Skills'),
-                                                icon: new Icon(Icons.build),
-                                                backgroundColor:  _bckgColor
-                                        ),
-
-                                        new BottomNavigationBarItem(
-                                                title: new Text('Timeline'),
-                                                icon: new Icon(Icons.timeline),
-                                                backgroundColor:  _bckgColor
+                        appBar: new AppBar(
+                                title: _signedIn?new Text('Ayushya Amitabh') : new Text('Login'),
+                                actions: <Widget>[
+                                        new IconButton(
+                                                icon: new Icon(_signedIn?Icons.exit_to_app :null),
+                                                onPressed: _signedIn? _signOut : null,
+                                                tooltip: 'Logout',
                                         )
                                 ],
                         ),
+                        body: _signedIn?new UserView():new Login()
                 );
-        }
-
-        void _changeScreen(int index) {
-                setState(() {
-                        _currentIndex = index;               
-                });
         }
 }
