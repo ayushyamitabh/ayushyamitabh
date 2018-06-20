@@ -1,151 +1,148 @@
 .App{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
+        display: flex;
+        flex-direction: column;
+        max-width: 100% !important;
+        align-items: center;
+        padding: 5% 10%;
 }
-.name-paper {
-  min-width: 243px;
-  height: fit-content;
-  padding: 20px;
-  text-align: center !important;
-  transform: scale(0.95) !important;
-  transition: all ease-in-out 0.3s;
-  flex: 1;
+.main-avatar{
+        width: 250px !important;
+        height: 250px !important;
+        filter: drop-shadow(0px 10px 7px darkgray);
 }
-.name-paper:hover{
-  transform: scale(0.98) !important;
+.name-paper{
+        margin-top: 5px; 
+        padding: 7px 20px;
+        border-radius: 7px !important;
+        border: 0.4px solid rgb(76, 100, 235);
 }
-.name-paper img {
-  position: relative;
-  width: 100%;
+.about{
+        margin-top: 10px;
+        padding: 15px;
+        width: 47.5%;
+        text-align: center !important;
 }
-.down-arrow {
-  margin-top: 20px !important;
+.name-paper h1{
+        font-weight: 400 !important;
 }
-.tile {
-  min-width: 100%;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: lightgrey;
+.socials{
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
 }
-.section-heading{
-  width: 85% !important;
-  padding: 20px;
-  border-radius: 15px !important;
+.social-btn{
+        margin: 0 5px !important;
+        transition: all ease-in-out 0.3s !important;
 }
-.section-content {
-  display: flex;
-  flex-direction: row;
-  width: 85%;
-  margin: 0;
-  padding: 20px 0;
-  justify-content: flex-start;
-  overflow-x: auto;
+@media (max-width: 500px){
+        .about{
+                width: 100% !important;
+        }
+        .section-btn{
+                font-size: 10px !important;
+        }
+        .section-icon{
+                display: none !important;
+        }
+        .experience, .projects, .skills{
+                width: 100% !important;
+        }
 }
-.small-screen-container {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  width: fit-content;
+/*===========================
+=========== SKILLS ===========
+=============================*/
+.skills{
+        margin-top: 10px;
+        width: 65%;
 }
-.section-card{
-  min-width: 500px;
-  margin: 0 5px;
+.skill-section{
+        margin-top: 10px;
+        border-radius: 7px !important;
 }
-.section-card .card{ 
-  border-radius: 15px !important;
-  height: 100% !important;
+.skill-item{
+        margin: 2px 5px !important;
 }
-.skill-chip{
-  margin: 2px 1px;
-  transition: all ease-in-out 0.2s;
+/*===========================
+=========PROJECTS ==========
+=============================*/
+.projects{
+        margin-top: 10px;
+        width: 65%;
 }
-.skill-chip:hover{
-  background: darkgray;
-  color: white;
+.project-card{
+        margin-top: 10px !important;
+        border-radius: 7px !important;
 }
-.exp {
-  background: rgb(137, 164, 216) !important;
+
+/*===========================
+=========EXPERIENCE ==========
+=============================*/
+.experience{
+        margin-top: 10px;
+        width: 65%;
 }
-.proj {
-  background: rgb(196, 186, 95) !important;
+.exp-card{
+        margin-top: 10px !important;
+        border-radius: 7px !important;
 }
-.skill {
-  background: rgb(196, 89, 89) !important;
-}
-.home-tile-buttons {
-  margin: 0;
-  padding: 0;
-  margin-left: 10px;
-  width: 390px;
-}
-* ::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
-}
-* ::-webkit-scrollbar-button {
-  width: 0px;
-  height: 0px;
-}
-* ::-webkit-scrollbar-thumb {
-  background: #080606;
-  border: 0px none #080606;
-  border-radius: 50px;
-}
-* ::-webkit-scrollbar-thumb:hover {
-  background: #080606;
-}
-* ::-webkit-scrollbar-thumb:active {
-  background: #080606;
-}
-* ::-webkit-scrollbar-track {
-  background: white;
-  border: 0px none #080606;
-  border-radius: 50px;
-}
-* ::-webkit-scrollbar-track:hover {
-  background: white;
-}
-* ::-webkit-scrollbar-track:active {
-  background: white;
-}
-* ::-webkit-scrollbar-corner {
-  background: transparent;
-}
-@media only screen and (max-width: 425px) {
-  .name-paper{
-    min-width: 250px;
-  }
-  .name-paper h1{
-    font-size: 18px !important;
-  }
-  .name-paper aside {
-    font-size: 14px !important;
-  }
-  .section-content{
-    overflow-y: hidden !important;
-    height: 350px;
-  }
-  .section-card{
-    min-width: 95%;
-    width: 95% !important;
-    max-width: 95% !important;
-  }
-  .content{
-    overflow-y: auto !important;
-    max-height: 53%;
-  }
-  .timeline-container{
-    overflow: hidden !important;
-  }
-  .event-card{
-    width: 90% !important;
-    align-self: center !important;
-    margin: 0 !important;
-    text-align: center !important;
-  }
-}
+/*===========================
+========== TIMELINE ==========
+=============================*/
+.timeline-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .year-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .year-container .year-chip{
+        width: fit-content !important;
+        font-size: 20px !important;
+        margin: 10px auto;
+        transition: all ease-in-out 0.2s;
+        position: sticky;
+        top: 10px;
+        z-index: 200;
+    }
+    .year-container .year-chip:hover{
+        transform: scale(1.2);
+        background: darkgray !important;
+        color: white !important;
+    }
+    .year-container .event-card {
+        width: 35%;
+        margin: 5px 0;
+        margin-left: 15%;
+        text-align: right;
+        transition: all ease-in-out 0.3s;
+    }
+    .year-container .event-card:hover {
+        background: rgb(78, 158, 223);
+    }
+    .year-container .event-card:hover *{
+        color: white !important;
+    }
+    .year-container .event-card.right {
+        margin-right: 15%;
+        align-self: flex-end;
+        text-align: left;
+    }
+    @media (max-width:500px){
+            .event-card{
+                    width: 90% !important;
+                    align-self: center !important;
+                    text-align: center !important;
+                    margin: 5px 0 !important;
+            }
+            .event-card.right{
+                    align-self: center !important;
+                    text-align: center !important;
+            }
+    }

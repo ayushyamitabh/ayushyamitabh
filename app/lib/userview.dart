@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 
@@ -11,24 +12,56 @@ class UserView extends StatefulWidget{
 class UserViewState extends State<UserView>{
         
         final _bckgColor = Color(0xFF42A5F5);
+        final _sectionNames = ['Projects','Experience','Skills','Events'];
         int _currentIndex =  0;
-        
+        ListView bodyView;
+
         void _changeScreen(int index) {
                 setState(() {
                         _currentIndex = index;               
+                });
+                print('called changeScreen');
+                _getData();
+        }
+
+        void _getData () {
+                print('called getData');
+                _database.reference().child(_sectionNames[_currentIndex]).once().then((DataSnapshot snapshot){
+                        if (snapshot.value != null) {
+                                List<Widget> listItems = [];
+                                if (_currentIndex == 0) {
+                                        for ( var value in snapshot.value.values){
+                                                listItems.add(
+                                                        new Card(
+                                                                child: new Column(
+                                                                        children: <Widget>[
+                                                                                new ListTile(
+                                                                                        title: new Text(value['name']),
+                                                                                )
+                                                                        ],
+                                                                ),
+                                                        )
+                                                );
+                                        }
+                                }
+                                else  {
+                                        print(snapshot.value);
+                                }
+                                setState(() {
+                                        bodyView = new ListView(children: listItems,);
+                                });
+                        }
                 });
         }
 
         @override
         Widget build(BuildContext context) {
                 return new Scaffold(
-                        body: null,
+                        body: bodyView,
                         floatingActionButton: new FloatingActionButton(
                                 tooltip: 'Refresh',
                                 child: new Icon(Icons.refresh, color: Colors.white),
-                                onPressed: (){
-                                        print('should refresh');
-                                },
+                                onPressed: _getData,
                         ),
                         bottomNavigationBar: new BottomNavigationBar(
                                 currentIndex: _currentIndex,
